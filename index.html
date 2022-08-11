@@ -136,7 +136,7 @@
                 <div class="col-lg-10 offset-lg-1">
                     <div class="cta-content">
                         <h2>Hacé <em>crecer</em> tu negocio <em> digital</em>!</h2>
-                        <p>Puedes dejar tu mensaje para potenciar tu marca y crear buenas ideas.</p>
+                        <p>Hablemos para potenciar tu marca y crear buenas ideas.</p>
                         <div class="main-button scroll-to-section">
                             <a href="#contact-us">contacto</a>
                         </div>
@@ -240,7 +240,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="contact-form">
-                        <form id="contact" action="mailto:ddigital789@gmail.com" method="post">
+                        <form id="contact" action="">
                           <div class="row">
                             <div class="col-md-6 col-sm-12">
                               <fieldset>
@@ -264,11 +264,12 @@
                             </div>
                             <div class="col-lg-12">
                               <fieldset>
-                                <button type="submit" id="form-submit" class="main-button">Enviar</button>
+                                <button type="submit" class="main-button">Enviar</button>
                               </fieldset>
                             </div>
                           </div>
                         </form>
+                        <a href="mailto:ddigital789@gmail.com" id="correojava">mail</a>
                     </div>
                 </div>
             </div>
@@ -294,6 +295,20 @@
             </div>
         </div>
     </footer>
+    <!-- Correo JAVA -->
+    <script>
+        const $form = document.querySelector('#contact')
+    const $buttonMailto = document.querySelector('#correojava')
+
+    $form.addEventListener('submit', handleSubmit)
+
+    function handleSubmit(event) {
+      event.preventDefault()
+      const form = new FormData(this)
+      $buttonMailto.setAttribute('href', `mailto:ddigital789@gmail.com?subject=nombre ${form.get('nombre')}  correo ${form.get('email')}&body=${form.get('mensaje')}`)
+      $buttonMailto.click()
+    }     
+    </script>
 
     <!-- jQuery -->
     <script src="recursos/js/jquery-2.1.0.min.js"></script>
