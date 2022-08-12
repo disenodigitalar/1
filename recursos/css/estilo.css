@@ -18,6 +18,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
   padding: 0;
   border: 0;
   outline: 0;
+  user-select: none;
 }
 
 .clearfix:after {
@@ -687,7 +688,7 @@ call to action
 }
 
 .cta-content p {
-  font-size: 14px;
+  font-size: 12px;
   color: #fff;
   margin: 15px 0px 25px 0px;
 }
@@ -729,24 +730,6 @@ trabajos
 
 #trainers .trainer-item p {
   margin-bottom: 20px;
-}
-
-#trainers .trainer-item ul.social-icons li {
-  display: inline-block;
-  margin-right: 12px;
-}
-
-#trainers .trainer-item ul.social-icons li:last-child {
-  margin-right: 0px;
-}
-
-#trainers .trainer-item ul.social-icons li a {
-  color: #232d39;
-  transition: all .3s;
-}
-
-#trainers .trainer-item ul.social-icons li a:hover {
-  color: #6cb13d;
 }
 
 
